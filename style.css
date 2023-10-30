@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap');
+
+
+body {
+  font-family: 'Pixelify Sans', sans-serif;
+  color: #222831;
+  font-size: 20px;
+  background-image: url("https://eshop.macsales.com/blog/wp-content/uploads/2018/06/Mojave.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  line-height: 2Opx;
+  text-align: center;
+  display: grid;
+  display: grid;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.5;
+  place-items: center;
+}
+
+
+
+div{
+  padding: 50px;
+  height: auto;
+  width: 500px;
+  margin: 25px auto;
+  border-radius: 50px;
+  box-shadow: 0 0 16px rgba(0,0,0,0.1);
+}
+
+
+
+.container {
+  width: 30rem;
+  height: auto;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, .15);
+
+  backdrop-filter: blur(5px);
+}
+
+
+
+h1 {
+  font-family: 'Pixelify Sans', sans-serif;
+  color:#c0c0c0;
+}
+
+h2 {
+  font-family: 'Pixelify Sans', sans-serif;
+  color:#c0c0c0;
+}
+
+/* img {
+  border-radius: 50%;
+  box-shadow:10px 10px 40px #222831;
+} */
+
+a:link {
+ font-family: 'Pixelify Sans', sans-serif;
+ color:#F05454;
+}
+
+a {
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+}
+
+a::before,
+a::after {
+ content: '';
+  position: absolute;
+  width: 100%;
+  left: 0;
+}
+a::before {
+  background-color: #F05454;
+  height: 2px;
+  bottom: 0;
+  transform-origin: 100% 50%;
+  transform: scaleX(0);
+  transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+a::after {
+  content: attr(data-replace);
+  height: 100%;
+  top: 0;
+  transform-origin: 100% 50%;
+  transform: translate3d(200%, 0, 0);
+  transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+  color: #F05454;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a:hover::before {
+  transform-origin: 0% 50%;
+  transform: scaleX(1);
+}
+a:hover::after {
+  transform: translate3d(0, 0, 0);
+}
+
+a span {
+  display: inline-block;
+  transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+a:hover span {
+  transform: translate3d(-200%, 0, 0);
+}
+
+/* Presentational Styles */
+body {
+  display: grid;
+  font-family: 'Poppins', sans-serif;
+  font-size: 27px;
+  line-height: 1.5;
+  height: 100vh;
+  place-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: #18272F;
+  font-weight: 700;
+  vertical-align: top;
+}
+
+img {
+  border-radius: 50%;
+  --_g: 10% /45% 45% no-repeat linear-gradient(#000 0 0);
+  --m:
+    left   var(--_i,0%) top    var(--_g),
+    bottom var(--_i,0%) left   var(--_g),
+    top    var(--_i,0%) right  var(--_g),
+    right  var(--_i,0%) bottom var(--_g);
+  -webkit-mask: var(--m);
+          mask: var(--m);
+  filter: grayscale();
+  transition: .3s linear;
+  cursor: pointer;
+}
+img:hover {
+  --_i: 90%;
+  filter: grayscale(0);
+}
+/*
+body {
+  margin: 0;
+  background-image: url("https://i.pinimg.com/originals/b3/19/d8/b319d809655f965c91ea4f4cb4340091.jpg");
+  background-size: cover;
+  display: grid;
+  min-height: 100vh;
+  grid-auto-flow :column;
+  place-content: center;
+  gap: 40px;
+} */
+
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 10px;
+  }
+
+  div {
+    padding: 20px;
+    width: auto;
+    margin: 10px;
+  }
+
+  .container {
+    width: auto;
+  }
+
+  h1, h2 {
+    font-size: 1.5em;
+  }
+
+  img {
+    width: 50%; /* Adjust to your preference */
+    margin: auto;
+    display: block;
+  }
+
+  ul {
+    padding: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  h1, h2 {
+    font-size: 1.2em;
+  }
+
+  img {
+    width: 70%; /* Adjust to your preference */
+  }
+}
